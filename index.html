@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nana — A visual voice for where and when it hurts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Nana home">
+      <img src="./assets/logo.svg" alt="Nana" class="brand-logo" />
+      
+    </a>
+
+    <nav class="site-nav" aria-label="Marketing navigation">
+      <a href="#product">How It Works</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#reviews">Reviews</a>
+      
+      <a class="nav-cta" href="https://nana-app-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Open Nana App</a>
+    </nav>
+<button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Child pain communication made visual</p>
+        <h1>A visual voice for where and when it hurts.</h1>
+        <p class="hero-text">
+          Nana helps children show where pain is happening through a friendly body map, while caregivers keep child profiles, pain intensity and pain history in one clear place.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://nana-app-frontend.vercel.app" class="button button-primary">Get Started</a>
+          <a href="https://nana-app-frontend.vercel.app" class="button button-secondary">Learn More</a>
+        </div>
+
+        <div class="hero-points">
+          <span>Child profiles</span>
+          <span>3D body map</span>
+          <span>Pain history</span>
+        </div>
+
+        </div>
+
+      <div class="phone-stack" id="product" aria-label="Nana product screens">
+        <article class="phone phone-home">
+          <div class="app-header">
+            <img src="./assets/topnavlogo.svg" alt="" />
+            <img src="./assets/hamburgermenu.svg" alt="" />
+          </div>
+          <div class="screen-content">
+            <h2>Your Children</h2>
+            <div class="child-card">
+              <div class="child-photo-wrap">
+                <img src="./assets/child1.svg" alt="Child profile" />
+              </div>
+              <div class="divider"></div>
+              <h3>Sunny</h3>
+              <p>4 years old</p>
+              <button>Open Body Map</button>
+            </div>
+          </div>
+          <div class="app-nav">
+            <img src="./assets/home-active.svg" alt="" />
+            <img src="./assets/history-inactive.svg" alt="" />
+            <img src="./assets/settings-inactive.svg" alt="" />
+          </div>
+        </article>
+
+        <article class="phone phone-history">
+          <div class="app-header">
+            <img src="./assets/topnavlogo.svg" alt="" />
+            <strong>History</strong>
+            <img src="./assets/hamburgermenu.svg" alt="" />
+          </div>
+          <div class="screen-content">
+            <h2>Pain History</h2>
+            <div class="search-box">Search pain reports</div>
+            <p class="group-title">This Week</p>
+            <div class="history-card">
+              <div class="history-top">
+                <img src="./assets/child1.svg" alt="" />
+                <div>
+                  <strong>Sunny</strong>
+                  <span>May 25, 04:57 PM</span>
+                </div>
+                <div class="score">
+                  <strong>8</strong>
+                  <span>/10</span>
+                </div>
+              </div>
+              <p><b>📍 Area</b><span>Left knee</span></p>
+              <p><b>🔥 Type</b><span>Sharp pain</span></p>
+              <p><b>📝 Note</b><span>After playing football</span></p>
+            </div>
+          </div>
+          <div class="app-nav">
+            <img src="./assets/home-active.svg" alt="" class="muted" />
+            <img src="./assets/history-active.svg" alt="" />
+            <img src="./assets/settings-inactive.svg" alt="" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="problem section">
+      <div class="section-heading">
+        <p class="eyebrow">The problem</p>
+        <h2>Children can feel pain clearly, but explaining it is not always easy.</h2>
+      </div>
+
+      <div class="cards-3">
+        <article>
+          <span>01</span>
+          <h3>Children struggle to describe pain</h3>
+          <p>They may know where it hurts, but not how to explain the type, intensity or timing.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Caregivers need better context</h3>
+          <p>Nana turns scattered pain moments into a structured history that can be reviewed later.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Doctors need clearer stories</h3>
+          <p>With child profiles, selected body areas, pain scores and notes, the pain story becomes easier to share.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how" class="how section">
+      <div class="section-heading">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps from child profile to pain summary.</h2>
+      </div>
+
+      <div class="steps">
+        <article>
+          <img src="./assets/addchildbutton.svg" alt="" />
+          <span>Step 1</span>
+          <h3>Add a child</h3>
+          <p>Create a profile with name, age and photo.</p>
+        </article>
+        <article>
+          <div class="body-preview">3D</div>
+          <span>Step 2</span>
+          <h3>Select body area</h3>
+          <p>Use the rotating body map to select where it hurts.</p>
+        </article>
+        <article>
+          <div class="pain-scale">8<span>/10</span></div>
+          <span>Step 3</span>
+          <h3>Log the pain</h3>
+          <p>Choose pain type, pain index and add notes.</p>
+        </article>
+        <article>
+          <img src="./assets/history-active.svg" alt="" />
+          <span>Step 4</span>
+          <h3>Review history</h3>
+          <p>See reports grouped by Today, This Week and Earlier.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="features" class="features section">
+      <div class="section-heading">
+        <p class="eyebrow">Features</p>
+        <h2>Designed around the actual Nana app experience.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article><h3>Child profiles</h3><p>Add children with name, age and profile image.</p></article>
+        <article><h3>3D body map</h3><p>Rotate, zoom and select pain areas visually.</p></article>
+        <article><h3>Limb recognition</h3><p>Selected body zones are converted into readable body part labels.</p></article>
+        <article><h3>Pain index</h3><p>Use a 1–10 score to show pain intensity.</p></article>
+        <article><h3>Summary screen</h3><p>Review spots, pain type, start time, pain score and notes.</p></article>
+        <article><h3>History timeline</h3><p>Track pain reports by Today, This Week and Earlier.</p></article>
+      </div>
+    </section>
+
+    <section class="gallery section">
+      <div class="section-heading">
+        <p class="eyebrow">App screens</p>
+        <h2>Real Nana interface elements, colours and assets.</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="./assets/logo.svg" alt="" />
+          <h3>Welcome</h3>
+          <p>a visual voice for where and when it hurts</p>
+        </div>
+        <div class="gallery-card">
+          <img src="./assets/child1.svg" alt="" />
+          <h3>Children</h3>
+          <p>Profiles make each pain report personal.</p>
+        </div>
+        <div class="gallery-card">
+          <div class="body-preview">3D</div>
+          <h3>Body Map</h3>
+          <p>Touch, rotate and zoom to select pain areas.</p>
+        </div>
+        <div class="gallery-card">
+          <div class="pain-scale">8<span>/10</span></div>
+          <h3>Pain Index</h3>
+          <p>A simple score helps communicate intensity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="reviews section">
+      <div class="section-heading">
+        <p class="eyebrow">Tester feedback</p>
+        <h2>Built from real product testing notes.</h2>
+      </div>
+
+      <div class="review-grid">
+        <blockquote>
+          “The history page should show Today, This Week and All, like a proper pain timeline.”
+          <cite>Product tester</cite>
+        </blockquote>
+        <blockquote>
+          “I need to edit the child profile: name, age and picture.”
+          <cite>Caregiver tester</cite>
+        </blockquote>
+        <blockquote>
+          “The app should feel good on smaller phones, not just desktop inspection.”
+          <cite>Mobile testing note</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="start" class="cta">
+      <img src="./assets/logo.svg" alt="Nana logo" />
+      <p class="eyebrow">Start using Nana</p>
+      <h2>Help children show pain clearly.</h2>
+      <p>Nana turns pain into a visual, trackable report that caregivers can understand and follow up on.</p>
+      <a class="button button-primary" href="https://nana-app-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Open Nana App</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+<div class="footer-brand">
+<img src="./assets/logo.svg" class="footer-logo" alt="Nana">
+<div>
+
+<p>A visual voice for where and when it hurts.</p>
+</div>
+</div>
+<div class="footer-links">
+<a href="#how">How It Works</a>
+<a href="#features">Features</a>
+<a href="#reviews">Reviews</a>
+</div>
+<div class="footer-meta">© 2026 Nana. All rights reserved.</div>
+</footer>
+</body>
+</html>
