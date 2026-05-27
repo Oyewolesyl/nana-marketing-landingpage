@@ -829,3 +829,15 @@ height:48px;
 .mobile-menu-toggle{display:none !important;}
 .site-nav{display:flex !important;}
 }
+
+@media (max-width:900px){
+.site-header{
+flex-direction:row!important;
+justify-content:space-between!important;
+align-items:center!important;
+padding:12px 16px!important;
+border-radius:24px!important;
+}
+.brand-logo{width:58px!important;height:58px!important;}
+.mobile-menu-toggle{display:flex!important;position:relative!important;right:auto!important;}
+}
