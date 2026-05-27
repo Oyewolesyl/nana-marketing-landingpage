@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nana — A visual voice for where and when it hurts</title>
+  <title>Nana — When kids can’t explain pain, Nana helps them show it</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -16,29 +16,29 @@
       
     </a>
 
-    <nav class="site-nav" aria-label="Marketing navigation">
-      <a href="#product">How It Works</a>
+    <nav class="site-nav" id="site-nav" aria-label="Marketing navigation">
+      <a href="#product">Product</a>
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="#reviews">Reviews</a><a href="technical.html">Technical Overview</a>
       
       <a class="nav-cta" href="https://nana-app-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Open Nana App</a>
     </nav>
-<button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+<button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Child pain communication made visual</p>
-        <h1>A visual voice for where and when it hurts.</h1>
+        <h1>When kids can’t explain pain, Nana helps them show it.</h1>
         <p class="hero-text">
           Nana helps children show where pain is happening through a friendly body map, while caregivers keep child profiles, pain intensity and pain history in one clear place.
         </p>
 
         <div class="hero-actions">
           <a href="https://nana-app-frontend.vercel.app" class="button button-primary">Get Started</a>
-          <a href="https://nana-app-frontend.vercel.app" class="button button-secondary">Learn More</a>
+          <a href="#features" class="button button-secondary">Learn More</a>
         </div>
 
         <div class="hero-points">
@@ -96,9 +96,9 @@
                   <span>/10</span>
                 </div>
               </div>
-              <p><b>📍 Area</b><span>Left knee</span></p>
-              <p><b>🔥 Type</b><span>Sharp pain</span></p>
-              <p><b>📝 Note</b><span>After playing football</span></p>
+              <p><b><i class="mini-icon area"></i>Area</b><span>Left knee</span></p>
+              <p><b><i class="mini-icon type"></i>Type</b><span>Sharp pain</span></p>
+              <p><b><i class="mini-icon note"></i>Note</b><span>After playing football</span></p>
             </div>
           </div>
           <div class="app-nav">
@@ -261,5 +261,35 @@
 </div>
 <div class="footer-meta">© 2026 Nana. All rights reserved.</div>
 </footer>
+<script>
+(function(){
+  var btn=document.querySelector('.mobile-menu-toggle');
+  var nav=document.querySelector('.site-nav');
+  if(!btn||!nav)return;
+  function close(){nav.classList.remove('is-open');btn.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){var open=nav.classList.toggle('is-open');btn.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',String(open));});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+
+<script>
+const toggle=document.querySelector(".mobile-menu-toggle");
+const nav=document.querySelector("#site-nav");
+if(toggle&&nav){
+ toggle.addEventListener("click",()=>{
+  nav.classList.toggle("mobile-open");
+  const expanded=toggle.getAttribute("aria-expanded")==="true";
+  toggle.setAttribute("aria-expanded", String(!expanded));
+ });
+ document.querySelectorAll("#site-nav a").forEach(link=>{
+  link.addEventListener("click",()=>{
+   nav.classList.remove("mobile-open");
+   toggle.setAttribute("aria-expanded","false");
+  });
+ });
+}
+</script>
+
 </body>
 </html>
