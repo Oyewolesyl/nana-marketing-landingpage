@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nana — When kids can’t explain pain, Nana helps them show it</title>
+  <title>Nana - Digital Body Mapping for Child Pain Communication</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -12,33 +12,38 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Nana home">
-      <img src="./assets/logo.svg" alt="Nana" class="brand-logo footer-style-logo" />
-      
+      <img src="./assets/logo.svg" alt="Nana" class="brand-logo" />
     </a>
 
     <nav class="site-nav" id="site-nav" aria-label="Marketing navigation">
       <a href="#product">Product</a>
       <a href="#how">How it works</a>
+      <a href="#body-map-screen">Body map</a>
       <a href="#features">Features</a>
-      <a href="#reviews">Reviews</a><a href="technical.html">Technical Overview</a>
-      
+      <a href="#reviews">Reviews</a>
+      <a href="./technical.html">Technical Overview</a>
       <a class="nav-cta" href="https://nana-app-frontend.vercel.app" target="_blank" rel="noopener noreferrer">Open Nana App</a>
     </nav>
-<button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+
+    <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Child pain communication made visual</p>
-        <h1>When kids can’t explain pain, Nana helps them show it.</h1>
+        <h1>When kids cannot explain pain, Nana helps them show it.</h1>
         <p class="hero-text">
-          Nana helps children show where pain is happening through a friendly body map, while caregivers keep child profiles, pain intensity and pain history in one clear place.
+          Nana helps children show where pain is happening through a friendly 3D body map, while caregivers keep profiles, pain scores, notes and history in one clear place.
         </p>
 
         <div class="hero-actions">
-          <a href="https://nana-app-frontend.vercel.app" class="button button-primary">Get Started</a>
-          <a href="#features" class="button button-secondary">Learn More</a>
+          <a href="https://nana-app-frontend.vercel.app" class="button button-primary" target="_blank" rel="noopener noreferrer">Get Started</a>
+          <a href="#body-map-screen" class="button button-secondary">View Body Map</a>
         </div>
 
         <div class="hero-points">
@@ -46,8 +51,7 @@
           <span>3D body map</span>
           <span>Pain history</span>
         </div>
-
-        </div>
+      </div>
 
       <div class="phone-stack" id="product" aria-label="Nana product screens">
         <article class="phone phone-home">
@@ -82,7 +86,9 @@
           </div>
           <div class="screen-content">
             <h2>Pain History</h2>
-            <div class="search-box">Search pain reports</div>
+            <p class="history-helper">See reports grouped by Earlier, Today, This Week and All.</p>
+            <div class="history-tabs"><span>Earlier</span><span>Today</span><span>This Week</span><span>All</span></div>
+            <div class="search-box"><i class="search-icon"></i>Search pain reports</div>
             <p class="group-title">This Week</p>
             <div class="history-card">
               <div class="history-top">
@@ -125,12 +131,12 @@
         <article>
           <span>02</span>
           <h3>Caregivers need better context</h3>
-          <p>Nana turns scattered pain moments into a structured history that can be reviewed later.</p>
+          <p>Nana turns scattered pain moments into structured records that can be reviewed later.</p>
         </article>
         <article>
           <span>03</span>
           <h3>Doctors need clearer stories</h3>
-          <p>With child profiles, selected body areas, pain scores and notes, the pain story becomes easier to share.</p>
+          <p>Child profiles, selected body areas, pain scores and notes make the pain story easier to share.</p>
         </article>
       </div>
     </section>
@@ -149,7 +155,7 @@
           <p>Create a profile with name, age and photo.</p>
         </article>
         <article>
-          <div class="body-preview">3D</div>
+          <div class="step-body-canvas" data-body-preview></div>
           <span>Step 2</span>
           <h3>Select body area</h3>
           <p>Use the rotating body map to select where it hurts.</p>
@@ -164,7 +170,96 @@
           <img src="./assets/history-active.svg" alt="" />
           <span>Step 4</span>
           <h3>Review history</h3>
-          <p>See reports grouped by Today, This Week and Earlier.</p>
+          <p>See reports grouped by Earlier, Today, This Week and All.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="actual-app-section actual-bodymap-section" id="body-map-screen">
+      <div class="actual-section-copy">
+        <span class="eyebrow">Actual app flow</span>
+        <h2>Body map selection using Nana's real 3D body model.</h2>
+        <p>The marketing page now uses the same body model asset from the app. It shows the child context, selected body areas, zoom controls and the continue action without placeholder drawings.</p>
+      </div>
+
+      <div class="actual-screen-row">
+        <article class="nana-phone-screen nana-showpain-screen">
+          <header class="nana-topbar">
+            <button class="nana-back"><img src="./assets/back.svg" alt="" /></button>
+          </header>
+
+          <h3 class="nana-screen-title">Where does it hurt?</h3>
+          <div class="nana-child-context">
+            <img src="./assets/child1.svg" alt="Sunny" />
+            <span>For Sunny</span>
+          </div>
+          <p class="nana-body-hint">Drag to rotate. Tap the place that hurts.</p>
+
+          <div class="nana-body-stage">
+            <canvas class="nana-body-canvas" data-body-map></canvas>
+            <span class="body-label body-label-head">Head</span>
+            <span class="body-label body-label-arm">Left arm</span>
+            <span class="body-label body-label-knee">Right knee</span>
+          </div>
+
+          <div class="nana-zoom-row">
+            <button>-</button>
+            <span>Zoom</span>
+            <button>+</button>
+          </div>
+
+          <button class="nana-continue">Continue</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="actual-app-section actual-notes-section" id="pain-notes-screen">
+      <div class="actual-section-copy">
+        <span class="eyebrow">Selected pain points</span>
+        <h2>Notes and summary for the pain points selected.</h2>
+        <p>Nana turns selected areas into a caregiver-friendly summary with pain type, start time, intensity and a note field.</p>
+      </div>
+
+      <div class="actual-screen-row actual-screen-row--two">
+        <article class="nana-phone-screen nana-summary-screen">
+          <header class="nana-topbar">
+            <button class="nana-back"><img src="./assets/back.svg" alt="" /></button>
+          </header>
+          <div class="nana-mini-body"><canvas data-mini-body></canvas><span>3 spots</span></div>
+          <h3 class="nana-screen-title">Pain Summary</h3>
+          <div class="nana-child-context nana-child-context--inline">
+            <img src="./assets/child1.svg" alt="Sunny" />
+            <span>For Sunny</span>
+          </div>
+          <section class="nana-summary-card">
+            <p><strong>Spots:</strong> Head, Left arm, Right knee</p>
+            <p><strong>Feels like:</strong> Sharp pain</p>
+            <p><strong>Started:</strong> Today</p>
+            <p><strong>Pain:</strong> 8 / 10</p>
+            <label class="nana-note-field">
+              <span>Add note</span>
+              <textarea rows="3" readonly>Pain started after football practice and increases while walking.</textarea>
+            </label>
+          </section>
+          <div class="nana-actions">
+            <button class="ghost">Back</button>
+            <button>Submit</button>
+          </div>
+        </article>
+
+        <article class="nana-phone-screen nana-history-detail-screen">
+          <header class="nana-app-header">
+            <img src="./assets/topnavlogo.svg" alt="" />
+            <strong>History</strong>
+            <img src="./assets/hamburgermenu.svg" alt="" />
+          </header>
+          <h3 class="nana-screen-title">Selected pain points</h3>
+          <section class="nana-summary-card nana-points-card">
+            <div class="pain-point"><span class="dot"></span><div><strong>Head</strong><p>Selected on the body map</p></div></div>
+            <div class="pain-point"><span class="dot"></span><div><strong>Left arm</strong><p>Saved as part of the pain report</p></div></div>
+            <div class="pain-point"><span class="dot"></span><div><strong>Right knee</strong><p>Visible in the caregiver summary</p></div></div>
+            <div class="note-preview"><strong>Caregiver note</strong><p>Pain started after football practice and increases while walking.</p></div>
+          </section>
         </article>
       </div>
     </section>
@@ -179,39 +274,9 @@
         <article><h3>Child profiles</h3><p>Add children with name, age and profile image.</p></article>
         <article><h3>3D body map</h3><p>Rotate, zoom and select pain areas visually.</p></article>
         <article><h3>Limb recognition</h3><p>Selected body zones are converted into readable body part labels.</p></article>
-        <article><h3>Pain index</h3><p>Use a 1–10 score to show pain intensity.</p></article>
+        <article><h3>Pain index</h3><p>Use a 1-10 score to show pain intensity.</p></article>
         <article><h3>Summary screen</h3><p>Review spots, pain type, start time, pain score and notes.</p></article>
-        <article><h3>History timeline</h3><p>Track pain reports by Today, This Week and Earlier.</p></article>
-      </div>
-    </section>
-
-    <section class="gallery section">
-      <div class="section-heading">
-        <p class="eyebrow">App screens</p>
-        <h2>Real Nana interface elements, colours and assets.</h2>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="./assets/logo.svg" alt="" />
-          <h3>Welcome</h3>
-          <p>a visual voice for where and when it hurts</p>
-        </div>
-        <div class="gallery-card">
-          <img src="./assets/child1.svg" alt="" />
-          <h3>Children</h3>
-          <p>Profiles make each pain report personal.</p>
-        </div>
-        <div class="gallery-card">
-          <div class="body-preview">3D</div>
-          <h3>Body Map</h3>
-          <p>Touch, rotate and zoom to select pain areas.</p>
-        </div>
-        <div class="gallery-card">
-          <div class="pain-scale">8<span>/10</span></div>
-          <h3>Pain Index</h3>
-          <p>A simple score helps communicate intensity.</p>
-        </div>
+        <article><h3>History timeline</h3><p>See reports grouped by Earlier, Today, This Week and All.</p></article>
       </div>
     </section>
 
@@ -223,15 +288,15 @@
 
       <div class="review-grid">
         <blockquote>
-          “The history page should show Today, This Week and All, like a proper pain timeline.”
+          <p>The history page should show Earlier, Today, This Week and All like a proper pain timeline.</p>
           <cite>Product tester</cite>
         </blockquote>
         <blockquote>
-          “I need to edit the child profile: name, age and picture.”
+          <p>I need to edit the child profile: name, age and picture.</p>
           <cite>Caregiver tester</cite>
         </blockquote>
         <blockquote>
-          “The app should feel good on smaller phones, not just desktop inspection.”
+          <p>The app should feel good on smaller phones, not just desktop inspection.</p>
           <cite>Mobile testing note</cite>
         </blockquote>
       </div>
@@ -247,49 +312,106 @@
   </main>
 
   <footer class="site-footer">
-<div class="footer-brand">
-<img src="./assets/logo.svg" class="footer-logo" alt="Nana">
-<div>
+    <div class="footer-brand">
+      <img src="./assets/logo.svg" class="footer-logo" alt="Nana">
+      <p>A visual voice for where and when it hurts.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#how">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#reviews">Reviews</a>
+      <a href="./technical.html">Technical Overview</a>
+    </div>
+    <div class="footer-meta">© 2026 Nana. All rights reserved.</div>
+  </footer>
 
-<p>A visual voice for where and when it hurts.</p>
-</div>
-</div>
-<div class="footer-links">
-<a href="#how">How It Works</a>
-<a href="#features">Features</a>
-<a href="#reviews">Reviews</a><a href="technical.html">Technical Overview</a>
-</div>
-<div class="footer-meta">© 2026 Nana. All rights reserved.</div>
-</footer>
-<script>
-(function(){
-  var btn=document.querySelector('.mobile-menu-toggle');
-  var nav=document.querySelector('.site-nav');
-  if(!btn||!nav)return;
-  function close(){nav.classList.remove('is-open');btn.classList.remove('is-open');btn.setAttribute('aria-expanded','false');}
-  btn.addEventListener('click',function(){var open=nav.classList.toggle('is-open');btn.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',String(open));});
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-})();
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script>
+    (function () {
+      var btn = document.querySelector('.mobile-menu-toggle');
+      var nav = document.querySelector('.site-nav');
+      if (!btn || !nav) return;
+      function close() {
+        nav.classList.remove('is-open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      btn.addEventListener('click', function () {
+        var open = !nav.classList.contains('is-open');
+        nav.classList.toggle('is-open', open);
+        btn.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
 
-<script>
-const toggle=document.querySelector(".mobile-menu-toggle");
-const nav=document.querySelector("#site-nav");
-if(toggle&&nav){
- toggle.addEventListener("click",()=>{
-  nav.classList.toggle("mobile-open");
-  const expanded=toggle.getAttribute("aria-expanded")==="true";
-  toggle.setAttribute("aria-expanded", String(!expanded));
- });
- document.querySelectorAll("#site-nav a").forEach(link=>{
-  link.addEventListener("click",()=>{
-   nav.classList.remove("mobile-open");
-   toggle.setAttribute("aria-expanded","false");
-  });
- });
-}
-</script>
+    (function () {
+      if (!window.THREE || !window.THREE.GLTFLoader) return;
+      var MODEL_Y_MIN = 0.0008;
+      var MODEL_Y_MAX = 1.1005;
+      var MODEL_SCALE = 1.8 / (MODEL_Y_MAX - MODEL_Y_MIN);
+      var MODEL_CENTRE_Y = (MODEL_Y_MIN + MODEL_Y_MAX) / 2;
 
+      function mountBody(canvas, options) {
+        if (!canvas) return;
+        var parent = canvas.parentElement;
+        var rect = parent.getBoundingClientRect();
+        var width = rect.width || 260;
+        var height = rect.height || 360;
+        var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.setSize(width, height);
+        renderer.setClearColor(0x000000, 0);
+
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(48, width / height, 0.01, 100);
+        camera.position.set(0, 0, options.distance || 2.25);
+        camera.lookAt(0, 0, 0);
+        scene.add(new THREE.AmbientLight(0xfff8ef, 0.85));
+        var key = new THREE.DirectionalLight(0xffffff, 1.4);
+        key.position.set(2, 3, 2);
+        scene.add(key);
+
+        new THREE.GLTFLoader().load('./assets/bodymap.glb', function (gltf) {
+          var model = gltf.scene;
+          model.scale.setScalar(MODEL_SCALE);
+          model.position.set(0, -(MODEL_CENTRE_Y * MODEL_SCALE), 0);
+          model.traverse(function (node) {
+            if (!node.isMesh) return;
+            node.material = new THREE.MeshStandardMaterial({ color: 0xf0b882, roughness: 0.55 });
+          });
+          scene.add(model);
+
+          var pinMaterial = new THREE.MeshBasicMaterial({ color: 0xff6f61 });
+          [
+            [0, 0.79, 0.11],
+            [-0.34, 0.22, 0.02],
+            [0.16, -0.48, 0.08]
+          ].forEach(function (point) {
+            var pin = new THREE.Mesh(new THREE.SphereGeometry(0.045, 18, 18), pinMaterial);
+            pin.position.set(point[0], point[1], point[2]);
+            model.add(pin);
+          });
+
+          function loop() {
+            window.requestAnimationFrame(loop);
+            if (options.rotate !== false) model.rotation.y += options.speed || 0.006;
+            renderer.render(scene, camera);
+          }
+          loop();
+        });
+      }
+
+      mountBody(document.querySelector('[data-body-map]'), { distance: 2.25, speed: 0.005 });
+      mountBody(document.querySelector('[data-mini-body]'), { distance: 2.55, speed: 0.007 });
+      document.querySelectorAll('[data-body-preview]').forEach(function (node) {
+        var canvas = document.createElement('canvas');
+        node.appendChild(canvas);
+        mountBody(canvas, { distance: 2.6, speed: 0.008 });
+      });
+    })();
+  </script>
 </body>
 </html>
