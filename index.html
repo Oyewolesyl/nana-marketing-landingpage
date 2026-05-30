@@ -194,12 +194,14 @@
             <span>For Sunny</span>
           </div>
           <p class="nana-body-hint">Drag to rotate. Tap the place that hurts.</p>
+          <div class="selected-area-row" aria-label="Selected body areas">
+            <span>Head</span>
+            <span>Left arm</span>
+            <span>Right knee</span>
+          </div>
 
           <div class="nana-body-stage">
             <canvas class="nana-body-canvas" data-body-map></canvas>
-            <span class="body-label body-label-head">Head</span>
-            <span class="body-label body-label-arm">Left arm</span>
-            <span class="body-label body-label-knee">Right knee</span>
           </div>
 
           <div class="nana-zoom-row">
@@ -225,14 +227,14 @@
           <header class="nana-topbar">
             <button class="nana-back"><img src="./assets/back.svg" alt="" /></button>
           </header>
-          <div class="nana-mini-body"><canvas data-mini-body></canvas><span>3 spots</span></div>
+          <div class="nana-mini-body"><canvas data-mini-body></canvas><span>1 spot</span></div>
           <h3 class="nana-screen-title">Pain Summary</h3>
           <div class="nana-child-context nana-child-context--inline">
             <img src="./assets/child1.svg" alt="Sunny" />
             <span>For Sunny</span>
           </div>
           <section class="nana-summary-card">
-            <p><strong>Spots:</strong> Head, Left arm, Right knee</p>
+            <p><strong>Spots:</strong> Chest</p>
             <p><strong>Feels like:</strong> Sharp pain</p>
             <p><strong>Started:</strong> Today</p>
             <p><strong>Pain:</strong> 8 / 10</p>
@@ -385,11 +387,8 @@
           scene.add(model);
 
           var pinMaterial = new THREE.MeshBasicMaterial({ color: 0xff6f61 });
-          [
-            [0, 0.79, 0.11],
-            [-0.34, 0.22, 0.02],
-            [0.16, -0.48, 0.08]
-          ].forEach(function (point) {
+          var spots = options.spots || [];
+          spots.forEach(function (point) {
             var pin = new THREE.Mesh(new THREE.SphereGeometry(0.045, 18, 18), pinMaterial);
             pin.position.set(point[0], point[1], point[2]);
             model.add(pin);
@@ -404,8 +403,18 @@
         });
       }
 
-      mountBody(document.querySelector('[data-body-map]'), { distance: 2.25, speed: 0.005 });
-      mountBody(document.querySelector('[data-mini-body]'), { distance: 2.55, speed: 0.007 });
+      mountBody(document.querySelector('[data-body-map]'), {
+        distance: 2.28,
+        rotate: false,
+        spots: []
+      });
+      mountBody(document.querySelector('[data-mini-body]'), {
+        distance: 2.58,
+        rotate: false,
+        spots: [
+          [0.02, 0.72, 0.12]
+        ]
+      });
       document.querySelectorAll('[data-body-preview]').forEach(function (node) {
         var canvas = document.createElement('canvas');
         node.appendChild(canvas);

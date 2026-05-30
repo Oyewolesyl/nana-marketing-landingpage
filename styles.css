@@ -551,6 +551,25 @@ h3 { margin-bottom: 10px; font-size: 22px; font-weight: 900; }
   font-size: 14px;
   font-weight: 900;
 }
+.selected-area-row {
+  width: calc(100% - 36px);
+  margin: 10px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+}
+.selected-area-row span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--button-red);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.9);
+  box-shadow: 0 2px 6px rgba(0,0,0,.16);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+}
 .nana-body-stage {
   width: 220px;
   height: 330px;
@@ -914,5 +933,273 @@ h3 { margin-bottom: 10px; font-size: 22px; font-weight: 900; }
   .nana-body-stage {
     width: 205px;
     height: 310px;
+  }
+}
+
+/* === Final mobile landing-page polish === */
+html {
+  scroll-padding-top: 112px;
+}
+
+@media (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    position: static;
+    top: auto;
+    width: calc(100% - 22px);
+    min-height: 68px;
+    margin: 10px auto 24px;
+    padding: 8px 10px;
+    border-radius: 28px;
+    gap: 12px;
+  }
+
+  .brand-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .mobile-menu-toggle {
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 25px;
+    height: 4px;
+  }
+
+  .site-nav {
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(280px, calc(100vw - 34px));
+    border-radius: 22px;
+  }
+
+  .section,
+  .actual-app-section,
+  .cta {
+    scroll-margin-top: 110px;
+  }
+
+  .actual-app-section {
+    width: 100%;
+    padding: 58px 0 68px;
+    overflow: hidden;
+  }
+
+  .actual-app-section + .actual-app-section {
+    padding-top: 72px;
+  }
+
+  .actual-section-copy {
+    width: min(calc(100% - 34px), 560px);
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+
+  .actual-section-copy .eyebrow {
+    font-size: 15px;
+    letter-spacing: .16em;
+  }
+
+  .actual-section-copy h2 {
+    max-width: 520px;
+    margin: 10px auto 16px;
+    font-size: clamp(34px, 9.6vw, 48px);
+    line-height: 1;
+  }
+
+  .actual-section-copy p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: clamp(18px, 4.9vw, 22px);
+    line-height: 1.45;
+  }
+
+  .actual-screen-row,
+  .actual-screen-row--two {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 26px;
+    overflow: visible;
+    padding: 0;
+    scroll-snap-type: none;
+  }
+
+  .nana-phone-screen {
+    flex: none;
+    width: min(286px, calc(100vw - 58px));
+    min-height: 0;
+    height: auto;
+    border-width: 7px;
+    border-radius: 30px;
+    scroll-snap-align: none;
+    box-shadow: 0 18px 42px rgba(20, 60, 90, .16);
+  }
+
+  .nana-topbar,
+  .nana-app-header {
+    min-height: 50px;
+    padding: 10px 12px;
+  }
+
+  .nana-back {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .nana-back img {
+    width: 30px;
+  }
+
+  .nana-screen-title {
+    margin: 10px 18px 0;
+    font-size: clamp(27px, 7.2vw, 34px);
+    line-height: 1.05;
+  }
+
+  .nana-child-context {
+    margin: 12px 18px 0;
+    min-height: 54px;
+    padding: 7px 12px;
+    border-radius: 18px;
+  }
+
+  .nana-child-context img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nana-body-hint {
+    width: min(250px, calc(100% - 32px));
+    margin: 12px auto 0;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .selected-area-row {
+    width: calc(100% - 34px);
+    margin-top: 9px;
+    gap: 6px;
+  }
+
+  .selected-area-row span {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .nana-body-stage {
+    width: calc(100% - 30px);
+    height: 220px;
+    margin: 8px auto 0;
+  }
+
+  .body-label {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .body-label-head {
+    left: 63%;
+    top: 18%;
+  }
+
+  .body-label-arm {
+    left: 8%;
+    top: 48%;
+  }
+
+  .body-label-knee {
+    right: 7%;
+    top: 66%;
+  }
+
+  .nana-zoom-row {
+    margin: 8px auto 0;
+    gap: 10px;
+  }
+
+  .nana-zoom-row button {
+    width: 58px;
+    height: 50px;
+    border-radius: 15px;
+  }
+
+  .nana-continue {
+    width: calc(100% - 56px);
+    height: 50px;
+    margin: 10px auto 18px;
+    border-radius: 16px;
+  }
+
+  .nana-summary-screen .nana-mini-body {
+    width: 138px;
+    height: 138px;
+    margin-top: 16px;
+  }
+
+  .nana-summary-card {
+    margin: 14px 14px 0;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .nana-summary-card p {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .nana-note-field textarea {
+    min-height: 82px;
+    font-size: 13px;
+  }
+
+  .nana-actions {
+    padding: 14px 16px 20px;
+  }
+
+  .nana-actions button {
+    height: 50px;
+  }
+}
+
+@media (max-width: 390px) {
+  .actual-app-section {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .actual-section-copy {
+    width: calc(100% - 30px);
+    margin-bottom: 24px;
+  }
+
+  .actual-section-copy h2 {
+    font-size: 34px;
+  }
+
+  .actual-section-copy p {
+    font-size: 18px;
+  }
+
+  .nana-phone-screen {
+    width: min(276px, calc(100vw - 50px));
+    border-width: 7px;
+  }
+
+  .nana-body-stage {
+    height: 210px;
+  }
+
+  .nana-screen-title {
+    font-size: 28px;
   }
 }
